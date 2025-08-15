@@ -1,0 +1,283 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DE TWINS BREAD - Freshly Baked Goodness</title>
+    <!-- Use a modern, readable font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f3f0; /* Soft, warm background */
+        }
+        /* Custom styles for a more polished look */
+        .btn-primary {
+            @apply px-8 py-3 rounded-full font-semibold text-white transition-transform duration-300 transform hover:scale-105 shadow-lg;
+            background-color: #d17a41; /* Warm orange/brown */
+        }
+        .section-title {
+            @apply text-3xl md:text-4xl font-bold text-center text-gray-800 mb-8 md:mb-12;
+        }
+        .container {
+            @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+        }
+        .card {
+            @apply bg-white rounded-2xl shadow-xl overflow-hidden transform transition-transform duration-300 hover:scale-105;
+        }
+
+        /* --- New animation styles for effects --- */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in-up.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="bg-white sticky top-0 z-50 shadow-md">
+        <div class="container py-4 flex flex-col md:flex-row justify-between items-center">
+            <a href="#" class="flex items-center space-x-2">
+                <!-- SVG logo: Chef's Hat in black and gold -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" class="w-10 h-10">
+                    <path d="M 10 30 C 15 20, 35 20, 40 30 L 40 40 L 10 40 Z" fill="#1a1a1a" stroke="#d1a00a" stroke-width="2"/>
+                    <path d="M 12 30 A 10 10 0 0 1 12 25 L 38 25 A 10 10 0 0 1 38 30 Z" fill="#d1a00a"/>
+                    <path d="M 10 30 C 15 20, 35 20, 40 30" fill="none" stroke="#d1a00a" stroke-width="2"/>
+                    <path d="M 15 25 C 18 18, 32 18, 35 25" fill="none" stroke="#d1a00a" stroke-width="2"/>
+                    <path d="M 18 20 C 21 15, 29 15, 32 20" fill="none" stroke="#d1a00a" stroke-width="2"/>
+                    <path d="M 20 18 C 23 14, 27 14, 30 18" fill="none" stroke="#d1a00a" stroke-width="2"/>
+                </svg>
+                <span class="text-2xl font-bold text-gray-800">DE TWINS BREAD</span>
+            </a>
+            <nav class="mt-4 md:mt-0">
+                <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-8 text-lg font-medium text-gray-600">
+                    <li><a href="#home" class="hover:text-amber-700 transition-colors">Home</a></li>
+                    <li><a href="#about" class="hover:text-amber-700 transition-colors">About Us</a></li>
+                    <li><a href="#products" class="hover:text-amber-700 transition-colors">Products</a></li>
+                    <li><a href="#contact" class="hover:text-amber-700 transition-colors">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="h-screen flex items-center bg-white">
+            <div class="container text-center text-gray-900">
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight tracking-tight mb-4 drop-shadow-md">
+                    Taste the Freshness, Feel the Difference
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 font-medium">
+                    Baked with love, delivered with care.
+                </p>
+                <a href="#products" class="btn-primary">
+                    Explore Our Breads
+                </a>
+            </div>
+        </section>
+
+        <!-- About Us Section with fade-in effect -->
+        <section id="about" class="py-16 md:py-24 fade-in-up">
+            <div class="container grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://placehold.co/600x400/ffe6cc/d17a41?text=Our+Bakery" alt="Bakery interior" class="rounded-2xl shadow-xl w-full">
+                </div>
+                <div>
+                    <h2 class="section-title text-left">Our Story</h2>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        Welcome to DE TWINS BREAD, where our passion for baking has been a family tradition for generations. We believe that great bread starts with the simplest, highest-quality ingredients—flour, water, yeast, and salt. Our commitment is to craft artisan bread with traditional techniques, ensuring every loaf is a masterpiece of flavor and texture. We are dedicated to bringing you the freshest bread, baked daily and made with no preservatives or artificial flavors. From our kitchen to your table, we promise a taste of pure, wholesome goodness.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        We are excited to take bread creation to an amazing new level, introducing more forms and new styles of bread for you to enjoy. This passion and dedication is led by our C.E.O.s, **Dauda Taiwo and Dauda Kehinde**. We invite you to experience the difference for yourself and enjoy your delighted day!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section with prices and fade-in effect -->
+        <section id="products" class="py-16 md:py-24 bg-orange-50 fade-in-up">
+            <div class="container">
+                <h2 class="section-title">Our Daily Bakes</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-8">
+                    <!-- Product Card 1 (Classic White Loaf) -->
+                    <div class="card">
+                        <img src="https://placehold.co/400x300/f8d8b4/d17a41?text=Classic+White" alt="Classic White Bread" class="w-full h-48 object-cover">
+                        <div class="p-6 text-center">
+                            <h3 class="text-xl font-bold text-gray-800 mb-1">Classic White Loaf</h3>
+                            <p class="text-lg font-bold text-gray-700 mb-2">#1300</p>
+                            <p class="text-gray-600 mb-4">Soft, fluffy, and perfect for sandwiches or toast. A timeless favorite.</p>
+                            <button class="btn-primary">Order Now</button>
+                        </div>
+                    </div>
+                    <!-- Product Card 2 (Medium Classic Bread) -->
+                    <div class="card">
+                        <img src="https://placehold.co/400x300/f8d8b4/d17a41?text=Medium+Classic" alt="Medium Classic Bread" class="w-full h-48 object-cover">
+                        <div class="p-6 text-center">
+                            <h3 class="text-xl font-bold text-gray-800 mb-1">Medium Classic Bread</h3>
+                            <p class="text-lg font-bold text-gray-700 mb-2">#600</p>
+                            <p class="text-gray-600 mb-4">A perfectly sized loaf for smaller households, with the same great taste.</p>
+                            <button class="btn-primary">Order Now</button>
+                        </div>
+                    </div>
+                    <!-- Product Card 3 (Circular Shaped Bread) -->
+                    <div class="card">
+                        <img src="https://placehold.co/400x300/f8d8b4/d17a41?text=Circular+Bread" alt="Circular Shaped Bread" class="w-full h-48 object-cover">
+                        <div class="p-6 text-center">
+                            <h3 class="text-xl font-bold text-gray-800 mb-1">Circular Shaped Bread</h3>
+                            <p class="text-lg font-bold text-gray-700 mb-2">#350</p>
+                            <p class="text-gray-600 mb-4">A fun, round loaf with a soft texture, ideal for sharing or tearing.</p>
+                            <button class="btn-primary">Order Now</button>
+                        </div>
+                    </div>
+                    <!-- Product Card 4 (Artisan Sourdough) -->
+                    <div class="card">
+                        <img src="https://placehold.co/400x300/f8d8b4/d17a41?text=Sourdough" alt="Sourdough Bread" class="w-full h-48 object-cover">
+                        <div class="p-6 text-center">
+                            <h3 class="text-xl font-bold text-gray-800 mb-1">Artisan Sourdough</h3>
+                            <p class="text-lg font-bold text-gray-700 mb-2">#1000</p>
+                            <p class="text-gray-600 mb-4">Tangy and chewy with a rustic crust. Made with our own starter.</p>
+                            <button class="btn-primary">Order Now</button>
+                        </div>
+                    </div>
+                    <!-- Product Card 5 (Sardine Bread) -->
+                    <div class="card">
+                        <img src="https://placehold.co/400x300/f8d8b4/d17a41?text=Sardine+Bread" alt="Sardine Bread" class="w-full h-48 object-cover">
+                        <div class="p-6 text-center">
+                            <h3 class="text-xl font-bold text-gray-800 mb-1">Sardine Bread</h3>
+                            <p class="text-lg font-bold text-gray-700 mb-2">#1200</p>
+                            <p class="text-gray-600 mb-4">A unique and savory loaf with a rich sardine filling. Perfect for a bold taste.</p>
+                            <button class="btn-primary">Order Now</button>
+                        </div>
+                    </div>
+                    <!-- Product Card 6 (Sardine Rolls) -->
+                    <div class="card">
+                        <img src="https://placehold.co/400x300/f8d8b4/d17a41?text=Sardine+Rolls" alt="Sardine Rolls" class="w-full h-48 object-cover">
+                        <div class="p-6 text-center">
+                            <h3 class="text-xl font-bold text-gray-800 mb-1">Sardine Rolls</h3>
+                            <p class="text-lg font-bold text-gray-700 mb-2">#500</p>
+                            <p class="text-gray-600 mb-4">Soft, fluffy rolls with a savory sardine filling, perfect for a quick snack.</p>
+                            <button class="btn-primary">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section with fade-in effect -->
+        <section class="py-16 md:py-24 fade-in-up">
+            <div class="container">
+                <h2 class="section-title">What Our Customers Say</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div class="card p-6">
+                        <div class="flex items-center mb-4">
+                            <img src="https://placehold.co/50x50/e0e0e0/555555?text=M" alt="Customer avatar" class="rounded-full mr-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Mercy dee</h4>
+                                <p class="text-sm text-gray-500">Local Resident</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 italic">"Their bread is a game changer. It's so fresh and delicious, and my family loves it. We've been buying it for months!"</p>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="card p-6">
+                        <div class="flex items-center mb-4">
+                            <img src="https://placehold.co/50x50/e0e0e0/555555?text=A" alt="Customer avatar" class="rounded-full mr-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Abdul wasiu shirullahi</h4>
+                                <p class="text-sm text-gray-500">Restaurant Owner</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 italic">"I use their sourdough for my restaurant, and my customers can't get enough. The quality is consistently excellent, and their service is outstanding."</p>
+                    </div>
+                    <!-- Testimonial 3 -->
+                    <div class="card p-6">
+                        <div class="flex items-center mb-4">
+                            <img src="https://placehold.co/50x50/e0e0e0/555555?text=M" alt="Customer avatar" class="rounded-full mr-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Micheal lammy</h4>
+                                <p class="text-sm text-gray-500">Home Baker</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 italic">"You can tell this bread is made with care. Their loaves are my favorite—perfectly textured and so flavorful. I highly recommend them!"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section with fade-in effect -->
+        <section id="contact" class="py-16 md:py-24 bg-orange-50 fade-in-up">
+            <div class="container text-center">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="max-w-xl mx-auto">
+                    <p class="text-lg text-gray-700 mb-8">
+                        Ready to taste the best bread in town? Visit our shop, give us a call, or find us on Facebook. We'd love to hear from you!
+                    </p>
+                    <div class="space-y-4 md:space-y-0 md:flex md:justify-center md:space-x-8 text-gray-700 text-lg">
+                        <div>
+                            <span class="font-semibold">Our Locations:</span><br>
+                            <span class="font-bold">Branch 01:</span> Oko baba agege junction iwoye ota ogun state<br>
+                            <span class="font-bold">Branch 02:</span> Koro otun junction ota ogun state nigeria
+                        </div>
+                        <div>
+                            <span class="font-semibold">Phone:</span><br>
+                            +234 805 051 3874<br>
+                            +234 803 721 5569
+                        </div>
+                        <div>
+                            <span class="font-semibold">Facebook:</span><br>
+                            <a href="#" class="text-blue-600 hover:underline">DE TWINS BAKERY FANS GROUP</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container text-center text-sm text-gray-400">
+            <p>&copy; 2025 DE TWINS BREAD. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for scroll-based animation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.fade-in-up');
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    // Check if the element is in the viewport
+                    if (entry.isIntersecting) {
+                        // If it is, add the 'is-visible' class to trigger the animation
+                        entry.target.classList.add('is-visible');
+                        // Stop observing the element once it's visible
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                // The 'rootMargin' allows us to define when the observer should trigger.
+                // This value tells the observer to trigger when the element is 10% from the viewport bottom.
+                rootMargin: '0px 0px -10% 0px',
+                threshold: 0.1 // Triggers when 10% of the element is visible
+            });
+
+            // Loop over all sections and observe each one
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
